@@ -1,0 +1,43 @@
+Task 3: 
+
+
+//index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Color Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="color-container">
+    <h1>Background Color Changer</h1>
+    <button class="color-btn" id="colorBtn">✨ Change Color</button>
+    <div class="color-code" id="colorCode">Current Color: #d9faff</div>
+  </div>
+
+  <script>
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    const btn = document.getElementById("colorBtn");
+    const colorCode = document.getElementById("colorCode");
+
+    btn.addEventListener("click", () => {
+      const newColor = getRandomColor();
+      document.body.style.background = newColor;
+      colorCode.textContent = Current Color: ${newColor};
+    });
+  </script>
+
+</body>
+</html>
+
