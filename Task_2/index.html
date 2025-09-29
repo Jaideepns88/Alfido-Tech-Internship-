@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Bar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MyWebsite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <div class="hamburger" id="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="home">
+    <h1>Welcome to My Website</h1>
+    <p>Explore a responsive and interactive navigation bar built with Bootstrap and custom CSS animations.</p>
+  </section>
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p>We are passionate about building modern, responsive, and creative web solutions tailored to your needs.</p>
+  </section>
+
+  <section id="services">
+    <h1>Our Services</h1>
+    <p>From web development to design and beyond, we provide a complete range of digital services to help you grow.</p>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Reach out to us anytime — we’d love to collaborate on your next big idea!</p>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const toggler = document.querySelector('.navbar-toggler');
+
+    toggler.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
+
+
